@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number</title>
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            border: 2px solid #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .disclaimer {
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            opacity: 0.7;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .square {
+            font-size: 3rem;
+            font-weight: bold;
+            border: 3px solid #fff;
+            border-radius: 10px;
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .underline {
+            border-bottom: 2px solid #fff;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            font-size: 1rem;
+            border: 2px solid #fff;
+            background-color: #000;
+            color: #fff;
+            border-radius: 5px;
+            width: calc(100% - 24px);
+            max-width: 300px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            margin: 10px;
+            background-color: #fff;
+            color: #000;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #000;
+            color: #fff;
+            border: 1px solid #fff;
+        }
+
+        .message {
+            margin: 20px 0;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+        }
+
+        .score-container {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            max-width: 300px;
+            margin: 20px auto;
+        }
+
+        .score-container div {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="disclaimer">Play responsibly and have fun!</div>
+        <h1>Guess the Number</h1>
+        <div class="square">?</div>
+        <div class="underline"></div>
+        <input type="number" placeholder="Enter your guess..." min="1" max="100" id="number">
+        <button id="check">Check</button>
+        <div class="message">Make a guess to see the result!</div>
+        <div class="score-container">
+            <div id="score">Score: <span>20</span></div>
+            <div id="high-score">High Score: <span>0</span></div>
+        </div>
+        <button id="again">Again</button>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
